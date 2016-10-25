@@ -21,16 +21,15 @@ def sum(array)
   return sum
 end
 
-def product(x, y)
-  x = x.to_f
-  y = y.to_f
-  return x * y
+def product(x, *y)
+  z = y.reduce(:*)
+  return x * z
 end
 
 def factorial(x)
   if x > 0
-    return (1..x).inject(:*)
+    return (1..x).reduce(:*)
   else
-    return 0
+    return 1
   end
 end
