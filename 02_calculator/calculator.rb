@@ -26,9 +26,9 @@ def product(x, *y)
   return x * z
 end
 
-def factorial(x)
-  if x > 0
-    return (1..x).reduce(:*)
+def factorial(a)
+  if a > 0
+    return (1..a).reduce(:*)
   else
     return 1
   end
